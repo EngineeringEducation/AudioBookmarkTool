@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6337F3E91B0FF92300FE5187 /* Prep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6337F3E81B0FF92300FE5187 /* Prep.storyboard */; };
 		B918C4A11B0FCFBF00F3B5ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918C4A01B0FCFBF00F3B5ED /* AppDelegate.swift */; };
 		B918C4A31B0FCFBF00F3B5ED /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918C4A21B0FCFBF00F3B5ED /* FirstViewController.swift */; };
 		B918C4A51B0FCFBF00F3B5ED /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918C4A41B0FCFBF00F3B5ED /* LiveViewController.swift */; };
-		B918C4A81B0FCFBF00F3B5ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B918C4A61B0FCFBF00F3B5ED /* Main.storyboard */; };
+		B918C4A81B0FCFBF00F3B5ED /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B918C4A61B0FCFBF00F3B5ED /* Live.storyboard */; };
 		B918C4AA1B0FCFBF00F3B5ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B918C4A91B0FCFBF00F3B5ED /* Images.xcassets */; };
 		B918C4AD1B0FCFBF00F3B5ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B918C4AB1B0FCFBF00F3B5ED /* LaunchScreen.xib */; };
 		B918C4B91B0FCFBF00F3B5ED /* AudioBookmarkToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918C4B81B0FCFBF00F3B5ED /* AudioBookmarkToolTests.swift */; };
@@ -27,12 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6337F3E81B0FF92300FE5187 /* Prep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Prep.storyboard; sourceTree = "<group>"; };
 		B918C49B1B0FCFBF00F3B5ED /* AudioBookmarkTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioBookmarkTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B918C49F1B0FCFBF00F3B5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B918C4A01B0FCFBF00F3B5ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B918C4A21B0FCFBF00F3B5ED /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B918C4A41B0FCFBF00F3B5ED /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
-		B918C4A71B0FCFBF00F3B5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B918C4A71B0FCFBF00F3B5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Live.storyboard; sourceTree = "<group>"; };
 		B918C4A91B0FCFBF00F3B5ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B918C4AC1B0FCFBF00F3B5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B918C4B21B0FCFBF00F3B5ED /* AudioBookmarkToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioBookmarkToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +84,8 @@
 				B918C4A01B0FCFBF00F3B5ED /* AppDelegate.swift */,
 				B918C4A21B0FCFBF00F3B5ED /* FirstViewController.swift */,
 				B918C4A41B0FCFBF00F3B5ED /* LiveViewController.swift */,
-				B918C4A61B0FCFBF00F3B5ED /* Main.storyboard */,
+				6337F3E81B0FF92300FE5187 /* Prep.storyboard */,
+				B918C4A61B0FCFBF00F3B5ED /* Live.storyboard */,
 				B918C4A91B0FCFBF00F3B5ED /* Images.xcassets */,
 				B918C4AB1B0FCFBF00F3B5ED /* LaunchScreen.xib */,
 				B918C49E1B0FCFBF00F3B5ED /* Supporting Files */,
@@ -195,7 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B918C4A81B0FCFBF00F3B5ED /* Main.storyboard in Resources */,
+				B918C4A81B0FCFBF00F3B5ED /* Live.storyboard in Resources */,
+				6337F3E91B0FF92300FE5187 /* Prep.storyboard in Resources */,
 				B918C4AD1B0FCFBF00F3B5ED /* LaunchScreen.xib in Resources */,
 				B918C4AA1B0FCFBF00F3B5ED /* Images.xcassets in Resources */,
 			);
@@ -240,12 +244,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B918C4A61B0FCFBF00F3B5ED /* Main.storyboard */ = {
+		B918C4A61B0FCFBF00F3B5ED /* Live.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B918C4A71B0FCFBF00F3B5ED /* Base */,
 			);
-			name = Main.storyboard;
+			name = Live.storyboard;
 			sourceTree = "<group>";
 		};
 		B918C4AB1B0FCFBF00F3B5ED /* LaunchScreen.xib */ = {
@@ -415,6 +419,7 @@
 				B918C4BE1B0FCFBF00F3B5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B918C4BF1B0FCFBF00F3B5ED /* Build configuration list for PBXNativeTarget "AudioBookmarkToolTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				B918C4C11B0FCFBF00F3B5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
