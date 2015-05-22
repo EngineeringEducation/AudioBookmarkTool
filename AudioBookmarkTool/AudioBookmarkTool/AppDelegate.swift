@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Standard window setup
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.makeKeyAndVisible()
+        
+        // Create the root tab bar view controller with two storyboards...!
+        
+        let tabBarController = UITabBarController()
+        self.window?.rootViewController = tabBarController
+        
+        let prepStoryboard = UIStoryboard(name: "Prep", bundle: nil)
+        let liveStoryboard = UIStoryboard(name: "Live", bundle: nil)
+        
+        tabBarController.viewControllers = [
+            prepStoryboard.instantiateInitialViewController(),
+            liveStoryboard.instantiateInitialViewController()
+        ]
+        
         return true
     }
 
