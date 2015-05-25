@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LiveView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llD-bx-Btq">
-                                <rect key="frame" x="106" y="33" width="108" height="37"/>
+                                <rect key="frame" x="32" y="0.0" width="108" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea5-c8-pSG">
-                                <rect key="frame" x="385" y="43" width="147" height="27"/>
+                                <rect key="frame" x="143" y="9" width="147" height="27"/>
                                 <color key="backgroundColor" red="1" green="0.91686369243421051" blue="0.90023643092105265" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.91686369243421051" blue="0.90023643092105265" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Start Live Event">
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmj-X3-a9R">
-                                <rect key="frame" x="388" y="293" width="140" height="26"/>
+                                <rect key="frame" x="338" y="10" width="140" height="26"/>
                                 <color key="backgroundColor" red="0.44913463865589198" green="0.71380177183014348" blue="0.53992586535164011" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Stop Live Event">
                                     <color key="titleColor" red="0.39772635541123813" green="0.24014255828859604" blue="0.29995888157894735" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,6 +45,22 @@
                                     <action selector="stopTimer:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="D35-vK-0ph"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wf2-qm-O66">
+                                <rect key="frame" x="375" y="117" width="240" height="187"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Moderator                                      Panalist one                                        Panelist two                            Panelist three                                </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-jN-Z98">
+                                <rect key="frame" x="35" y="51" width="582" height="31"/>
+                            </slider>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Question 1.   How does bla bla bla Question 2.  What are your..... Question 3. How could...." translatesAutoresizingMaskIntoConstraints="NO" id="VZc-jx-Wkx">
+                                <rect key="frame" x="37" y="117" width="240" height="187"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -52,6 +68,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="700" height="400"/>
+                    <connections>
+                        <outlet property="startButton" destination="ea5-c8-pSG" id="3VC-2g-URz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
