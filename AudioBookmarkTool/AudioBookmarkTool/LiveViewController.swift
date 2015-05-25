@@ -8,7 +8,15 @@
 
 import UIKit
 
+
 class LiveViewController: UIViewController {
+    
+    
+    @IBOutlet weak var startButton: UIButton!
+    startButton.enable = false
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +27,28 @@ class LiveViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    @IBAction func startTimer(sender: AnyObject) {
+        println("Start button pressed!")
+        var currentTime = NSDate() // ger en NSDate instans som representerar nu
+        println("Current time is \(currentTime)")
+        
+        
+        
+    }
+    
+    
+    
+    @IBAction func stopTimer(sender: AnyObject) {
+        println("Stop button pressed!")
+    }
+    
 
 
 }
+
+
+
 
