@@ -40,30 +40,57 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         "And to conclude, bla bla bla"
     ]
     
+    // table view for the panellists
+    @IBOutlet
+    var panellistTableView: UITableView!
+    
+    var panellists: [String] = [
+        "Karla Sandoval",
+        "Janarden Yri",
+        "Emma Koszinowski"
+    ]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // set table view
         self.questionsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.panellistTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    //count the number of rows depending on table view
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.questions.count;
+        if tableView == questionsTableView {
+            return self.questions.count;
+        } else {
+            return self.panellists.count;
+        }
+        
     }
     
-    
+    // get row index
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.questionsTableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        if tableView == questionsTableView {
+            var cell:UITableViewCell = self.questionsTableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+            cell.textLabel?.text = self.questions[indexPath.row]
+            return cell
+        } else {
+            var cell:UITableViewCell = self.panellistTableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+            cell.textLabel?.text = self.panellists[indexPath.row]
+            return cell
+        }
         
-        cell.textLabel?.text = self.questions[indexPath.row]
-        
-        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        if tableView == questionsTableView {
+            println("You selected question #\(indexPath.row)!")
+        } else {
+            println("You selected panellist #\(indexPath.row)!")
+        }
+        
     }
     
 
