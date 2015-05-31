@@ -9,26 +9,27 @@
 import UIKit
 
 
-class LiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
+    // Start Time Button
     @IBOutlet weak var startButton: UIButton!
     var currentStartTime: NSDate? // gives an NSDate instance that represents now
     //var startTimer: Bool
     //startTimer.enable = false    //the start button should only be pressable once, only this code doesnt do that..
     
-    
+    // Stop Time Button
     @IBOutlet weak var stopButton: UIButton!
     var currentStopTime: NSDate? // also gives and NSDate instance that represents now
     
     var elapsed_time: NSTimeInterval = 0
     
     
-    //label to show the elapsed time
+    // Label to show the elapsed time
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
     
-    // table view for the questions
+    // Table view for the questions
     @IBOutlet
     var questionsTableView: UITableView!
     
@@ -40,9 +41,9 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         "And to conclude, bla bla bla"
     ]
     
-    // table view for the panellists
-    @IBOutlet
-    var panellistTableView: UITableView!
+   
+    
+    @IBOutlet weak var panelistCollectionView: UICollectionView!
     
     var panellists: [String] = [
         "Karla Sandoval",
@@ -50,48 +51,58 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         "Emma Koszinowski"
     ]
     
+    
+   
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // set table view
+        // Set table view
         self.questionsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.panellistTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.panelistCollectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     }
     
-    //count the number of rows depending on table view
+    // QUESTIONS
+    
+    // Count the number of rows in the Questions Table View
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == questionsTableView {
-            return self.questions.count;
-        } else {
-            return self.panellists.count;
-        }
-        
+        return self.questions.count
     }
+
     
-    // get row index
+    // Get row index of the Questions Table View
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if tableView == questionsTableView {
-            var cell:UITableViewCell = self.questionsTableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        var cell:UITableViewCell = self.questionsTableView.dequeueReusableCellWithIdentifier("cell") as!UITableViewCell
             cell.textLabel?.text = self.questions[indexPath.row]
             return cell
-        } else {
-            var cell:UITableViewCell = self.panellistTableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-            cell.textLabel?.text = self.panellists[indexPath.row]
-            return cell
-        }
-        
     }
     
+    // Get selected index of Questions
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if tableView == questionsTableView {
-            println("You selected question #\(indexPath.row)!")
-        } else {
-            println("You selected panellist #\(indexPath.row)!")
-        }
-        
+        println("You selected question #\(indexPath.row)!")
     }
+    
+    // PANELIST
+    
+    // Count the number of Panalist to go into the Panelist Collection View
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.panellists.count
+    }
+    
+    // Get the index of the Panelist Collection View
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        var cell = self.panelistCollectionView.dequeueReusableCellWithReuseIdentifier("panelist cell", forIndexPath: indexPath) as! PanelistCell
+            cell.panelistNameLabel?.text = self.panellists[indexPath.row]
+            return cell
+    }
+    
+    // Get selected index of Panelist 
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        println("You selected panelist #\(indexPath.row)!")
+    }
+    
     
 
     override func didReceiveMemoryWarning() {
@@ -123,6 +134,12 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         elapsedTimeLabel.text = "\(elapsed_time) seconds"
     }
     
+    
+}
+
+class PanelistCell : UICollectionViewCell {
+    
+    @IBOutlet weak var panelistNameLabel: UILabel!
     
 }
     
