@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631C7EC91B1FB59B00C01A93 /* PannelistInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C7EC81B1FB59B00C01A93 /* PannelistInfoViewController.swift */; };
+		631C7ECB1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C7ECA1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift */; };
 		6337F3E91B0FF92300FE5187 /* Prep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6337F3E81B0FF92300FE5187 /* Prep.storyboard */; };
 		B918C4A11B0FCFBF00F3B5ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918C4A01B0FCFBF00F3B5ED /* AppDelegate.swift */; };
 		B918C4A31B0FCFBF00F3B5ED /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918C4A21B0FCFBF00F3B5ED /* FirstViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		631C7EC81B1FB59B00C01A93 /* PannelistInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannelistInfoViewController.swift; sourceTree = "<group>"; };
+		631C7ECA1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionQuestionsViewController.swift; sourceTree = "<group>"; };
 		6337F3E81B0FF92300FE5187 /* Prep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Prep.storyboard; sourceTree = "<group>"; };
 		B918C49B1B0FCFBF00F3B5ED /* AudioBookmarkTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioBookmarkTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B918C49F1B0FCFBF00F3B5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				B918C4A21B0FCFBF00F3B5ED /* FirstViewController.swift */,
 				B918C4A41B0FCFBF00F3B5ED /* LiveViewController.swift */,
 				6337F3E81B0FF92300FE5187 /* Prep.storyboard */,
+				631C7ECA1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift */,
+				631C7EC81B1FB59B00C01A93 /* PannelistInfoViewController.swift */,
 				B918C4A61B0FCFBF00F3B5ED /* Live.storyboard */,
 				B918C4A91B0FCFBF00F3B5ED /* Images.xcassets */,
 				B918C4AB1B0FCFBF00F3B5ED /* LaunchScreen.xib */,
@@ -222,8 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B918C4A51B0FCFBF00F3B5ED /* LiveViewController.swift in Sources */,
+				631C7ECB1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift in Sources */,
 				B918C4A11B0FCFBF00F3B5ED /* AppDelegate.swift in Sources */,
 				B918C4A31B0FCFBF00F3B5ED /* FirstViewController.swift in Sources */,
+				631C7EC91B1FB59B00C01A93 /* PannelistInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
