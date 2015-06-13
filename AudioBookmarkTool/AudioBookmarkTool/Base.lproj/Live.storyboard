@@ -28,6 +28,10 @@
                                 <rect key="frame" x="31" y="121" width="435" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <slider key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="QaG-jN-Z98">
+                                    <rect key="frame" x="0.0" y="0.0" width="435" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </slider>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="hbz-xj-K5A"/>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="dqv-Vo-8By"/>
@@ -53,7 +57,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="panelist cell" id="XEb-rY-nCa" customClass="PanelistCell" customModule="AudioBookmarkTool" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="19" y="0.0" width="146" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="146" height="77"/>
