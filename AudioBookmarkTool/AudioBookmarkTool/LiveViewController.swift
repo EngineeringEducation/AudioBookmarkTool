@@ -6,6 +6,16 @@
 //  Copyright (c) 2015 Emma Koszinowski. All rights reserved.
 //
 
+
+// TO DO
+// Constraints on layout objects
+// Show elapsing time at the bottom left corner
+// Expand the tabelview with the questions so that they are able to scroll
+// Get data on questions to an array and use that array in the live view
+// Get data on the panalist to an array and display that in the live view
+
+// Data model to connect the question, panalist and time
+
 import UIKit
 
 
@@ -38,6 +48,14 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         "How would you describe bla",
         "Given that bla what's the next bla",
         "What would be the best bla",
+        "What are your thougts on bla",
+        "How would you describe bla",
+        "Given that bla what's the next bla",
+        "What would be the best bla",
+        "What are your thougts on bla",
+        "How would you describe bla",
+        "Given that bla what's the next bla",
+        "What would be the best bla",
         "And to conclude, bla bla bla"
     ]
     
@@ -46,13 +64,11 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var panelistCollectionView: UICollectionView!
     
     var panellists: [String] = [
-        "Karla Sandoval",
-        "Janarden Yri",
-        "Emma Koszinowski"
+        "Elvis Presley",
+        "Marilyn Monroe",
+        "James Dean"
     ]
     
-    
-   
     
 
     override func viewDidLoad() {
@@ -86,7 +102,7 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // PANELIST
     
-    // Count the number of Panalist to go into the Panelist Collection View
+    // Count the number of Panelist to go into the Panelist Collection View
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.panellists.count
     }
