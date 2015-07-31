@@ -2,9 +2,7 @@
 //  AppDelegate.swift
 //  AudioBookmarkTool
 //
-//  Created by Emma Koszinowski on 5/22/15.
-//  Copyright (c) 2015 Emma Koszinowski. All rights reserved.
-//
+
 
 import UIKit
 
