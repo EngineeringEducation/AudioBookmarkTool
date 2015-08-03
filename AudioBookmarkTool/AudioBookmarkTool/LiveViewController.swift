@@ -19,7 +19,7 @@
 import UIKit
 
 
-class LiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+class LiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     // Start Time Button
@@ -61,9 +61,10 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
     
    
     
-    @IBOutlet weak var panelistCollectionView: UICollectionView!
+    @IBOutlet weak var panelistTableView: UITableView!
+    @IBOutlet var panelistDataSource: TableViewDataSource!
     
-    var panellists: [String] = [
+    var panelists: [String] = [
         "Elvis Presley",
         "Marilyn Monroe",
         "James Dean"
@@ -75,9 +76,11 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.panelistDataSource.items = self.panelists
+        
         // Set table view
         self.questionsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.panelistCollectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+//        self.panelistTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     // QUESTIONS
@@ -91,8 +94,8 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
     // Get row index of the Questions Table View
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.questionsTableView.dequeueReusableCellWithIdentifier("cell") as!UITableViewCell
-            cell.textLabel?.text = self.questions[indexPath.row]
-            return cell
+        cell.textLabel?.text = self.questions[indexPath.row]
+        return cell
     }
     
     // Get selected index of Questions
@@ -101,23 +104,6 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     // PANELIST
-    
-    // Count the number of Panelist to go into the Panelist Collection View
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.panellists.count
-    }
-    
-    // Get the index of the Panelist Collection View
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell = self.panelistCollectionView.dequeueReusableCellWithReuseIdentifier("panelist cell", forIndexPath: indexPath) as! PanelistCell
-            cell.panelistNameLabel?.text = self.panellists[indexPath.row]
-            return cell
-    }
-    
-    // Get selected index of Panelist 
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("You selected panelist #\(indexPath.row)!")
-    }
     
     
 
@@ -152,17 +138,3 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
 }
-
-class PanelistCell : UICollectionViewCell {
-    
-    @IBOutlet weak var panelistNameLabel: UILabel!
-    
-}
-    
-    
-
-
-
-
-
-
