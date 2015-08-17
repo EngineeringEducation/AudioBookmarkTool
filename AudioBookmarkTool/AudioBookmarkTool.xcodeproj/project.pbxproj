@@ -10,6 +10,7 @@
 		631B693B1B7020A3000E76A9 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631B693A1B7020A3000E76A9 /* TableViewDataSource.swift */; };
 		631C7EC91B1FB59B00C01A93 /* PannelistInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C7EC81B1FB59B00C01A93 /* PannelistInfoViewController.swift */; };
 		631C7ECB1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C7ECA1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift */; };
+		633051AB1B751C16001653AF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633051AA1B751C16001653AF /* File.swift */; };
 		633287691B250D0F0000BC70 /* Panel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633287681B250D0F0000BC70 /* Panel.swift */; };
 		6337F3E91B0FF92300FE5187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6337F3E81B0FF92300FE5187 /* Main.storyboard */; };
 		B918C4A11B0FCFBF00F3B5ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918C4A01B0FCFBF00F3B5ED /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		631B693A1B7020A3000E76A9 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		631C7EC81B1FB59B00C01A93 /* PannelistInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannelistInfoViewController.swift; sourceTree = "<group>"; };
 		631C7ECA1B1FB60F00C01A93 /* DiscussionQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionQuestionsViewController.swift; sourceTree = "<group>"; };
+		633051AA1B751C16001653AF /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		633287681B250D0F0000BC70 /* Panel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Panel.swift; sourceTree = "<group>"; };
 		6337F3E81B0FF92300FE5187 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B918C49B1B0FCFBF00F3B5ED /* AudioBookmarkTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioBookmarkTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			children = (
 				B918C4A01B0FCFBF00F3B5ED /* AppDelegate.swift */,
 				B918C4A21B0FCFBF00F3B5ED /* FirstViewController.swift */,
+				633051AA1B751C16001653AF /* File.swift */,
 				B918C4A41B0FCFBF00F3B5ED /* LiveViewController.swift */,
 				631B693A1B7020A3000E76A9 /* TableViewDataSource.swift */,
 				6337F3E81B0FF92300FE5187 /* Main.storyboard */,
@@ -174,7 +177,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = "Emma Koszinowski";
+				ORGANIZATIONNAME = "PanelPower!";
 				TargetAttributes = {
 					B918C49A1B0FCFBF00F3B5ED = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -234,6 +237,7 @@
 				633287691B250D0F0000BC70 /* Panel.swift in Sources */,
 				B918C4A11B0FCFBF00F3B5ED /* AppDelegate.swift in Sources */,
 				B918C4A31B0FCFBF00F3B5ED /* FirstViewController.swift in Sources */,
+				633051AB1B751C16001653AF /* File.swift in Sources */,
 				631B693B1B7020A3000E76A9 /* TableViewDataSource.swift in Sources */,
 				631C7EC91B1FB59B00C01A93 /* PannelistInfoViewController.swift in Sources */,
 			);

@@ -2,9 +2,6 @@
 //  LiveViewController.swift
 //  AudioBookmarkTool
 //
-//  Created by Emma Koszinowski on 5/22/15.
-//  Copyright (c) 2015 Emma Koszinowski. All rights reserved.
-//
 
 
 // TO DO
@@ -19,7 +16,7 @@
 import UIKit
 
 
-class LiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LiveViewController: UIViewController, UITableViewDelegate {
     
     
     // Start Time Button
@@ -40,8 +37,8 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     // Table view for the questions
-    @IBOutlet
-    var questionsTableView: UITableView!
+    @IBOutlet var questionsTableView: UITableView!
+    @IBOutlet var questionsDataSource: TableViewDataSource!
     
     var questions: [String] = [
         "What are your thougts on bla",
@@ -59,8 +56,10 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         "And to conclude, bla bla bla"
     ]
     
-   
     
+ 
+    
+   
     @IBOutlet weak var panelistTableView: UITableView!
     @IBOutlet var panelistDataSource: TableViewDataSource!
     
@@ -77,34 +76,44 @@ class LiveViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view, typically from a nib.
         
         self.panelistDataSource.items = self.panelists
+        self.questionsDataSource.items = self.questions
         
         // Set table view
-        self.questionsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        self.questionsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
 //        self.panelistTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
-    // QUESTIONS
-    
-    // Count the number of rows in the Questions Table View
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.questions.count
+    @IBAction func returnFromDiscussionQuestions(segue: UIStoryboardSegue) {
+        
     }
-
     
-    // Get row index of the Questions Table View
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.questionsTableView.dequeueReusableCellWithIdentifier("cell") as!UITableViewCell
-        cell.textLabel?.text = self.questions[indexPath.row]
-        return cell
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // Get selected index of Questions
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected question #\(indexPath.row)!")
+        println("You selected #\(indexPath.row)!")
     }
-    
-    // PANELIST
-    
     
 
     override func didReceiveMemoryWarning() {
