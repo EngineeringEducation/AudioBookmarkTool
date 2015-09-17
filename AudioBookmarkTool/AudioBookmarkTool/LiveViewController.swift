@@ -19,14 +19,21 @@ import UIKit
 class LiveViewController: UIViewController, UITableViewDelegate {
     
     
-    // Start Time Button
+    // Start the Time Button
     @IBOutlet weak var startButton: UIButton!
-    var currentStartTime: NSDate? // gives an NSDate instance that represents now
-    //var startTimer: Bool
-    //startTimer.enable = false    //the start button should only be pressable once, only this code doesnt do that..
+    var currentStartTime: NSDate?
     
-    // Stop Time Button
+    
+    
+    
+    
+    // gives an NSDate instance that represents now
+    //var startTimer: Bool
+    //startTimer.enable = false    //the start button should only be pressable once
+    
+    // Stop the Time Button
     @IBOutlet weak var stopButton: UIButton!
+
     var currentStopTime: NSDate? // also gives and NSDate instance that represents now
     
     var elapsed_time: NSTimeInterval = 0
@@ -92,28 +99,13 @@ class LiveViewController: UIViewController, UITableViewDelegate {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // Get selected index of Questions
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected #\(indexPath.row)!")
+        println("You selected question #\(indexPath.row)!")
     }
+    
+    // PANELIST
+    
     
 
     override func didReceiveMemoryWarning() {

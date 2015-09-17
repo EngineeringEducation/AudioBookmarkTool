@@ -25,3 +25,13 @@ class TableViewDataSource: NSObject, UITableViewDataSource {
         return cell
     }
 }
+
+
+
+// cell.startButton.tag = indexPath.row
+// cell.startButton.addTarget(self, action: "startAction:", forControlEvents: .TouchUpInside)
+
+
+
+
+
