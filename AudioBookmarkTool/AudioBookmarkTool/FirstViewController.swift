@@ -31,6 +31,28 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        panel.questions = [
+            "What are your thoughts on bla",
+            "How would you describe bla",
+            "Given that bla what's the next bla",
+            "What would be the best bla",
+            "What are your thougts on bla",
+            "How would you describe bla",
+            "Given that bla what's the next bla",
+            "What would be the best bla",
+            "What are your thougts on bla",
+            "How would you describe bla",
+            "Given that bla what's the next bla",
+            "What would be the best bla",
+            "And to conclude, bla bla bla"
+        ]
+        panel.panelists = [
+            "Elvis Presley",
+            "Marilyn Monroe",
+            "James Dean"
+        ]
+        panel.eventName = "Strange Loop"
         // Do any additional setup after loading the view, typically from a nib.
         
         
@@ -57,6 +79,13 @@ class FirstViewController: UIViewController {
     //[defaults setInteger:9001 forKey:@"HighScore"];
    // [defaults synchronize];//
 
+    var panel: Panel = Panel()
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let panelistInfoViewController = segue.destinationViewController as? PannelistInfoViewController {
+            panelistInfoViewController.panel = panel
+        }
+    }
 
 }
 

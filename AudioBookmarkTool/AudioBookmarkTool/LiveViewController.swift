@@ -11,7 +11,7 @@
 // Get data on questions to an array and use that array in the live view
 // Get data on the panalist to an array and display that in the live view
 
-// Data model to connect the question, panalist and time
+// Data model to connect the question, pannelist and time
 
 import UIKit
 
@@ -47,43 +47,17 @@ class LiveViewController: UIViewController, UITableViewDelegate {
     @IBOutlet var questionsTableView: UITableView!
     @IBOutlet var questionsDataSource: TableViewDataSource!
     
-    var questions: [String] = [
-        "What are your thougts on bla",
-        "How would you describe bla",
-        "Given that bla what's the next bla",
-        "What would be the best bla",
-        "What are your thougts on bla",
-        "How would you describe bla",
-        "Given that bla what's the next bla",
-        "What would be the best bla",
-        "What are your thougts on bla",
-        "How would you describe bla",
-        "Given that bla what's the next bla",
-        "What would be the best bla",
-        "And to conclude, bla bla bla"
-    ]
+    var panel: Panel?
     
-    
- 
-    
-   
     @IBOutlet weak var panelistTableView: UITableView!
     @IBOutlet var panelistDataSource: TableViewDataSource!
     
-    var panelists: [String] = [
-        "Elvis Presley",
-        "Marilyn Monroe",
-        "James Dean"
-    ]
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.panelistDataSource.items = self.panelists
-        self.questionsDataSource.items = self.questions
+        self.panelistDataSource.items = self.panel?.panelists ?? []
+        self.questionsDataSource.items = self.panel?.questions ?? []
         
         // Set table view
 //        self.questionsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
